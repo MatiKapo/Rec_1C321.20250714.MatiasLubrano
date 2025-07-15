@@ -54,6 +54,17 @@ public abstract class Vehiculo implements Comparable<Vehiculo>{
         return this.marca.compareTo(otroVehiculo.marca);
     }
     
+    @Override
+    
+    public boolean equals(Object o){
+        
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        Vehiculo vehiculo = (Vehiculo) o;
+        
+        return anioFabricacion == vehiculo.anioFabricacion && patente.equals(vehiculo.patente);
+    }
+    
     
     
     
